@@ -5,31 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/css/all.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
 </head>
 
 <body>
     <div class="app">
         <header class="header">
-            <nav class="header__navbar">
-                <ul class="header__navbar-list">
-                    <li class="header__navbar-item">Vào cửa hàng trên ứng dụng F8</li>
-                    <li class="header__navbar-item">Kết nối</li>
-                </ul>
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--separate">Vào cửa hàng trên ứng dụng F8</li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-poiter">Kết nối</span>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
 
-                <ul class="header__navbar-list">
-                    <li class="header__navbar-item">
-                        <a href="" class="header__navbar-item-link">
-                            Thông báo
-                        </a>
-                    </li>
-                    <li class="header__navbar-item"><a href="" class="header__navbar-item-link">Trợ giúp</a></li>
-                    <li class="header__navbar-item">Đăng kí</li>
-                    <li class="header__navbar-item">Đăng nhập</li>
-                </ul>
-            </nav>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-regular fa-bell"></i>
+                                Thông báo
+                            </a>
+                        </li>
+                        <li class="header__navbar-item"><a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-regular fa-circle-question"></i> Trợ giúp</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng
+                            kí</li>
+                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
+                    </ul>
+                </nav>
+
+            </div>
+
         </header>
 
         <div class="container">
