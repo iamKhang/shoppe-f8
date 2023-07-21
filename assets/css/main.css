@@ -122,6 +122,10 @@
 
 /* Header notification */
 
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+
 .header__notify {
     position: absolute;
     top: 118%;
@@ -129,7 +133,42 @@
     width: 400px;
     background-color: var(--while-color);
     border: 1px solid #D3D3D3;
+    cursor: text;
+    transform-origin: 98% top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    will-change: opacity, transform;
+    display: none;
+}
 
+@keyframes headerNotifyGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify::before{
+    content: "";
+    border-style: solid;
+    border-width: 20px 26px;
+    border-color: transparent transparent var(--while-color) transparent ;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+}
+
+.header__notify::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
 }
 
 .header__notify-header {
@@ -179,8 +218,9 @@
 .header__notify-name {
     display: block;
     font-size: 1.4rem;
-    color: var(--black-color);
+    color: var(--text-color);
     font-weight: 400;
+    line-height: 1.8rem;
 }
 
 .header__notify-description {
@@ -188,14 +228,58 @@
     font-size: 1.2rem;
     line-height: 1.6rem;
     color: #756F6E;
+    margin-top: 4px;
 }
 
 .header_notify-footer{
-    text-align: center;
-    display: block;
+    /* text-align: center; */
+    display: flex;
 }
 
 .header_notify-footer-btn{
     color: var(--text-color);
-    padding: 16px 14px;
+    padding: 8px 32px;
+    margin: auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.modal__body{
+    width: 300px;
+    height: 300px;
+    background-color: var(--while-color);
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+.modal__inner{
+
 }
