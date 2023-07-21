@@ -2,6 +2,8 @@
     --while-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --primary-color: rgb(250, 79, 47)
+   
 }
 
 *{
@@ -37,4 +39,15 @@ a{
 
 li{
     list-style-type: none;
+}
+
+
+/* Animation */
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
