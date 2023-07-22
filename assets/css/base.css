@@ -1,53 +1,98 @@
-:root{
+:root {
     --while-color: #fff;
     --black-color: #000;
     --text-color: #333;
-    --primary-color: rgb(250, 79, 47)
-   
+    --primary-color: rgb(250, 79, 47) ;
+    --border-color: #dbdbdb;
 }
 
-*{
+* {
     box-sizing: inherit;
 
 }
 
-html{
+html {
     font-size: 62.5%;
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
-.grid{
+.grid {
     width: 1200px;
     max-width: 100%;
-    margin:0 auto ;
+    margin: 0 auto;
 }
 
-.grid__full-width{
+.grid__full-width {
     width: 100%;
 }
 
-.grid__row{
+.grid__row {
     display: flex;
     flex-wrap: wrap;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
 
 /* Animation */
-@keyframes fadeIn{
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
+}
+
+
+/* Button style  */
+.btn{
+    min-width: 142px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--while-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.btn.btn-normal:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary{
+    background-color: var(--primary-color);
+    color: #fff;
+
+}
+
+
+
+.btn.btn--disable{
+    cursor: default;
+    /* background-color: #ccc; */
+}
+
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 14px;
+}
+
+.auth-form__socials-label{
+    margin: 0 32px;
 }
