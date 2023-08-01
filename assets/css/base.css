@@ -4,6 +4,11 @@
     --text-color: #333;
     --primary-color: rgb(250, 79, 47) ;
     --border-color: #dbdbdb;
+
+    --navbar-height: 34px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(var(--header-height))-var(var(--navbar-height)));
+    
 }
 
 * {
