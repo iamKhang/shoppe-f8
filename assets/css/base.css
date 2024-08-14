@@ -1,121 +1,168 @@
 :root {
-    --while-color: #fff;
-    --black-color: #000;
-    --text-color: #333;
-    --primary-color: rgb(250, 79, 47) ;
-    --border-color: #dbdbdb;
+  --while-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --primary-color: rgb(250, 79, 47);
+  --border-color: #dbdbdb;
 
-    --navbar-height: 34px;
-    --header-height: 120px;
-    --header-with-search-height: calc(var(var(--header-height))-var(var(--navbar-height)));
-    
-    --col-width: calc(100% / 12);
+  --navbar-height: 34px;
+  --header-height: 120px;
+  --header-with-search-height: calc(
+    var(var(--header-height))-var(var(--navbar-height))
+  );
+
+  --col-width: calc(100% / 12);
 }
 
 * {
-    box-sizing: inherit;
-
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    line-height: 1.6rem;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 /* Responsive */
 .grid {
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .grid__full-width {
-    width: 100%;
+  width: 100%;
 }
 
 .grid__row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.grid__row{
-    margin-left: -12px;
-    margin-right: -12px;
-
+.grid__row {
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
-.grid__col-2{
-    padding-left: 12px;
-    padding-right: 12px;
-    width: calc(var(--col-width) * 2);
+.grid__col-2 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: calc(var(--col-width) * 2);
 }
 
-.grid__col-10{
-    width: calc(var(--col-width) * 10);
+.grid__col-10 {
+  width: calc(var(--col-width) * 10);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
-
 
 /* Animation */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
-
 
 /* Button style  */
-.btn{
-    min-width: 124px;
-    height: 36px;
-    border: none;
-    border-radius: 2px;
+.btn {
+  width: 124px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: var(--while-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.btn.btn-normal:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn.btn--disable {
+  cursor: default;
+  /* background-color: #ccc; */
+}
+
+.btn.btn--size-s {
+  height: 32px;
+  font-size: 14px;
+}
+
+.auth-form__socials-label {
+  margin: 0 32px;
+}
+
+/* Selection */
+.select-input {
+  height: 34px;
+  padding: 0 12px;
+  background-color: var(--while-color);
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.select-input:hover .select-input__list {
+  display: block;
+}
+
+.select-input__label {
+  font-size: 1.4rem;
+}
+
+.select-input__icon {
+  font-size: 1.4rem;
+  color: rgb(131, 131, 131);
+  position: relative;
+  top: 1px;
+}
+
+.select-input__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  background-color: var(--while-color);
+  border-radius: 2px;
+  padding: 8px 16px;
+  list-style: none;
+  display: none;
+}
+
+.select-input__item {
     font-size: 1.4rem;
-    padding: 0;
+    padding: 8px 0;
     cursor: pointer;
-    color: var(--text-color);
-    background-color: var(--while-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 8px;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
 }
 
-.btn.btn-normal:hover{
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.btn.btn--primary{
-    background-color: var(--primary-color);
-    color: #fff;
-
-}
-
-
-
-.btn.btn--disable{
-    cursor: default;
-    /* background-color: #ccc; */
-}
-
-.btn.btn--size-s{
-    height: 32px;
-    font-size: 14px;
-}
-
-.auth-form__socials-label{
-    margin: 0 32px;
+.select-input__item:hover {
+    color: var(--primary-color);
 }

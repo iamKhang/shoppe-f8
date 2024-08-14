@@ -356,15 +356,15 @@
 
       <div class="app__container">
         <div class="grid">
-          <div class="grid__row">
+          <div class="grid__row app_conternt">
             <div class="grid__col-2">
               <nav class="category">
-                <h3 class="category__heading"><i class="category-icon fa-solid fa-list"></i> DANH MỤC</h3>
+                <h3 class="category__heading">
+                  <i class="category-icon fa-solid fa-list"></i> DANH MỤC
+                </h3>
                 <ul class="category-list">
                   <li class="category-item category-item--active">
-                    <a href="" class="category-item__link"
-                      >TEE WOMENT-FIT</a
-                    >
+                    <a href="" class="category-item__link">TEE WOMENT-FIT</a>
                   </li>
                   <li class="category-item">
                     <a href="" class="category-item__link">tee regular-fit</a>
@@ -395,7 +395,45 @@
               </nav>
             </div>
 
-            <div class="grid__col-10"></div>
+            <div class="grid__col-10">
+              <div class="home-filter">
+                <span class="home-filter__title">Sắp xếp theo</span>
+                <button class="btn home-filter__btn">Phổ biến</button>
+                <button class="btn home-filter__btn btn--primary">Mới nhất</button>
+                <button class="btn home-filter__btn">Bán chạy</button>
+
+                <div class="select-input">
+                  <span class="select-input__label">Giá</span>
+                  <i class="select-input__icon fa-solid fa-angle-down select-input__icon"></i>
+
+                  <ul class="select-input__list">
+                    <li class="select-input__item">Giá: Thấp đến cao</li>
+                    <li class="select-input__item">Giá: Cao đến thấp</li>
+                  </ul>
+                </div>
+
+                <div class="home-filter_page">
+                  <span class="home-filter_page-num">
+                    <span class="home-filter_page-num-current">1</span>/
+                    <span class="home-filter_page-num-total">12</span>
+                  </span>
+
+                  <div class="home-filter_page-control">
+                    <a href="" class="home-filter_page-btn home-filter_page-btn--disable">
+                      <i
+                        class="home-filter_page-btn-icon fa-solid fa-angle-left "
+                      ></i>
+                    </a>
+
+                    <a href="" class="home-filter_page-btn">
+                      <i
+                        class="home-filter_page-btn-icon fa-solid fa-angle-right"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
